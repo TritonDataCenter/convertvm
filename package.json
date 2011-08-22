@@ -6,8 +6,7 @@
   "main": "bin/sdc-convertvm",
   "directories": {
     "lib": "lib",
-    "bin": "bin",
-    "node_modules": "node_modules"
+    "bin": "bin"
   },
   "bin": { "sdc-convertvm": "./bin/sdc-convertvm.js" }
 }
