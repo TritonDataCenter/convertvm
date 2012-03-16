@@ -1,20 +1,20 @@
 # NAME
 
-sdc-convertvm - Convert VM images into Smart Datacenter dataset manifests.
+convertvm - Convert VM images into Smart Datacenter dataset manifests.
 
 
 # SYNOPSIS
 
-    sdc-convertvm [-dhnouv] inputvm output-directory
+    convertvm [-dhnouv] inputvm output-directory
 
 
 # DESCRIPTION
 
-Virtual Machine images may be represented by various formats. `sdc-convertvm`
+Virtual Machine images may be represented by various formats. `convertvm`
 takes as input a VM (virtual machine) or VA (or virtual appliace) and can
 output a binary dataset that can be imported into SDC (Smart Data Center).
 
-`sdc-convertvm` accepts as input OVF (Open Virtualization Format) files. It
+`convertvm` accepts as input OVF (Open Virtualization Format) files. It
 outputs a .dsmanifest and .zfs.bz2 file to the `output-directory` specified at
 invocation.
 
@@ -60,3 +60,25 @@ invocation.
 
 - http://www.vmware.com/appliances/getting-started/learn/ovf.html
 - http://www.dmtf.org/standards/published_documents/DSP0243_1.1.0.pdf
+
+# LICENSE
+
+Copyright (c) 2012 Joyent, All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

@@ -1,12 +1,12 @@
 {
-  "name": "sdc-convertvm",
+  "name": "convertvm",
   "description": "SmartDC VM Conversion Tools",
   "version": "1.0.0",
   "author": "Joyent (joyent.com)",
-  "main": "bin/sdc-convertvm",
+  "main": "bin/convertvm",
   "directories": {
     "lib": "lib",
     "bin": "bin"
   },
-  "bin": { "sdc-convertvm": "./bin/sdc-convertvm.js" }
+  "bin": { "convertvm": "./bin/convertvm.js" }
 }
