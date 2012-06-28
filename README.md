@@ -5,7 +5,7 @@ convertvm - Convert VM images into Smart Datacenter dataset manifests.
 
 # SYNOPSIS
 
-    convertvm [-dhnouv] inputvm output-directory
+    convertvm [-dhnouv] inputvm.ovf-directory
 
 
 # DESCRIPTION
@@ -31,16 +31,16 @@ invocation.
 ## Dataset Override Options
 
     -n/--ds-manifest <name>
-         Set the dataset name. (ie. myvm)
+         (Mandatory): Set the dataset name. (ie. myvm)
+
+    -o/--ds-os <os>
+         (Mandatory): Set the dataset operating system. (ie. linux, windows, smartos, etc.)
 
     -v/--ds-version <version>
          Set the dataset version. (ie. 1.0.0)
 
     -d/--ds-description <description>
          Set the dataset description. Maximum of 256 characters.
-
-    -o/--ds-os <os>
-         Set the dataset operating system. (ie. linux, windows, smartos, etc.)
 
     -N/--ds-nic-driver <pcnet|e1000|...>
          Set the nic driver.
