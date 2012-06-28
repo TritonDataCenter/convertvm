@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DIR=$(cd `dirname $0`/..; pwd)
+
+$DIR/build/node/bin/node ./bin/convertvm.js $*
