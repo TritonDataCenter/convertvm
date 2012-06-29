@@ -73,6 +73,15 @@ release: all deps #docs
 	(cd $(TMPDIR) && $(TAR) -jcf $(ROOT)/$(RELEASE_TARBALL) convertvm)
 	@rm -rf $(TMPDIR)
 
+.PHONY: publish
+publish: release
+	@if [[ -z "$(BITS_DIR)" ]]; then \
+    echo "error: 'BITS_DIR' must be set for 'publish' target"; \
+    exit 1; \
+  fi
+	mkdir -p $(BITS_DIR)/convertvm
+	cp $(ROOT)/$(RELEASE_TARBALL) $(BITS_DIR)/convertvm/$(RELEASE_TARBALL)
+
 
 include ./tools/mk/Makefile.deps
 include ./tools/mk/Makefile.node_prebuilt.targ
