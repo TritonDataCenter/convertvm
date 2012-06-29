@@ -22,12 +22,12 @@ TAP		:= ./node_modules/.bin/tap
 #
 # Files
 #
-REPO_ROOT	= $(shell pwd)
-DOC_FILES	= index.restdown boilerplateapi.restdown
+ROOT = $(shell pwd)
+DOC_FILES = index.restdown boilerplateapi.restdown
 JS_FILES := $(shell ls *.js 2>/dev/null) $(shell find lib -name '*.js' 2>/dev/null)
-JSL_CONF_NODE	= tools/jsl.node.conf
+JSL_CONF_NODE = tools/jsl.node.conf
 JSL_FILES_NODE = $(JS_FILES)
-JSSTYLE_FILES	= $(JS_FILES)
+JSSTYLE_FILES = $(JS_FILES)
 JSSTYLE_FLAGS = -o indent=4,doxygen,unparenthesized-return=0
 
 NODE_PREBUILT_VERSION=v0.6.19
