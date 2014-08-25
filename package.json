@@ -8,5 +8,8 @@
     "lib": "lib",
     "bin": "bin"
   },
-  "bin": { "convertvm": "./bin/convertvm.js" }
+  "bin": {
+    "convertvm": "./bin/convertvm.js"
+  },
+  "license": "MPL-2.0"
 }

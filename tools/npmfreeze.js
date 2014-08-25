@@ -1,7 +1,16 @@
 #!/usr/bin/env node
 // -*- mode: js -*-
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/*
+ * Copyright (c) 2014, Joyent, Inc.
+ */
+
 //
-// Copyright (c) 2012, Joyent, Inc. All rights reserved.
 //
 // Generate a "dependencies" block for a top-level package.json that includes
 // the explicit versions for all recursive npm modules. See "Method 3" in
