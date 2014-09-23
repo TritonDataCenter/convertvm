@@ -59,7 +59,7 @@ CLEAN_FILES += $(TAP) ./node_modules/tap
 
 ROOT            := $(shell pwd)
 RELEASE_TARBALL := convertvm-$(STAMP).tar.bz2
-TMPDIR          := /tmp/$(STAMP)
+RELSTAGEDIR          := /tmp/$(STAMP)
 
 .PHONY: test
 test: $(TAP)
@@ -68,7 +68,7 @@ test: $(TAP)
 .PHONY: release
 release: all deps #docs
 	@echo "Building $(RELEASE_TARBALL)"
-	@mkdir -p $(TMPDIR)/convertvm
+	@mkdir -p $(RELSTAGEDIR)/convertvm
 	cp -r   $(ROOT)/build \
     $(ROOT)/bin \
     $(ROOT)/lib \
@@ -76,9 +76,9 @@ release: all deps #docs
     $(ROOT)/node_modules \
     $(ROOT)/package.json \
     $(ROOT)/tools \
-    $(TMPDIR)/convertvm
-	(cd $(TMPDIR) && $(TAR) -jcf $(ROOT)/$(RELEASE_TARBALL) convertvm)
-	@rm -rf $(TMPDIR)
+    $(RELSTAGEDIR)/convertvm
+	(cd $(RELSTAGEDIR) && $(TAR) -jcf $(ROOT)/$(RELEASE_TARBALL) convertvm)
+	@rm -rf $(RELSTAGEDIR)
 
 .PHONY: publish
 publish: release
